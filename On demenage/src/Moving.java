@@ -17,7 +17,7 @@ public class Moving {
     /**
      * The method who calculate the process of doing the Moving
      */
-    public void PerformMoving(){
+    public void performMoving(){
             while (totalBoxes > 0){
                 if(totalBoxes < boxesThisTrip){
                     boxesThisTrip = totalBoxes;

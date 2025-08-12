@@ -13,7 +13,7 @@ public class Main {
                 int totalBoxes = clavier.nextInt();
                 int boxesThisTrip = clavier.nextInt();
                 Moving moving = new Moving(totalBoxes, boxesThisTrip);
-                moving.PerformMoving();
+                moving.performMoving();
                 input=true;
             }
             catch(InputMismatchException e){
