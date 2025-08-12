@@ -4,7 +4,7 @@ A simple Java program that calculate the number of trip needed to move a total o
 
 ---
 
-## Description
+## 📖 Description
 
 The program asks the user:
 1- **Total number of boxes to move**.
@@ -16,7 +16,7 @@ Then it simulates each trip and display:
 
 ---
 
-## Features
+## 🚀 Features
 
 -User input through the console
 -Calculation of trips based on total boxes and capacity
