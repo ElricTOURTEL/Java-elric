@@ -17,7 +17,7 @@ public class Main {
                 input=true;
             }
             catch(InputMismatchException e){
-                System.out.println("Erreur !!!! Saisissez des nombres entiers");
+                Output.tripMessageError();
                 clavier.nextLine();
             }
         }

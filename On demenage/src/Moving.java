@@ -17,6 +17,7 @@ public class Moving {
     /**
      * The method who calculate the process of doing the Moving
      */
+
     public void performMoving(){
             while (totalBoxes > 0){
                 if(totalBoxes < boxesThisTrip){
@@ -24,8 +25,11 @@ public class Moving {
                 }
                 totalTrips++;
                 totalBoxes -= boxesThisTrip;
-                System.out.println("Le voyage a fait " + boxesThisTrip + " colis transporter");
+                Output.tripMessage(boxesThisTrip);
+
             }
-            System.out.println("Le déménagement est terminé en " + totalTrips + "!");
+            Output.endMessage(totalTrips);
         }
+
+
 }
