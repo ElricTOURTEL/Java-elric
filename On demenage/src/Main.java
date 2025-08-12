@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        Scanner clavier = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
         int totalBoxes = 0;
         int boxesThisTrip = 0;
         boolean validBoxes = false;
@@ -13,26 +13,26 @@ public class Main {
         while(!validBoxes) {
             Output.inputMessageBoxes();
             try {
-                totalBoxes = clavier.nextInt();
+                totalBoxes = keyboard.nextInt();
                 validBoxes = true;
             } catch (InputMismatchException e) {
                 Output.tripMessageError();
-                clavier.nextLine();
+                keyboard.nextLine();
             }
         }
         while(!validCapacity){
             Output.inputMessageCapacity();
             try {
-                boxesThisTrip = clavier.nextInt();
+                boxesThisTrip = keyboard.nextInt();
                 validCapacity = true;
             }
             catch (InputMismatchException e) {
                 Output.tripMessageError();
-                clavier.nextLine();
+                keyboard.nextLine();
             }
         }
         Moving moving = new Moving(totalBoxes, boxesThisTrip);
         moving.performMoving();
-        clavier.close();
+        keyboard.close();
         }
 }
