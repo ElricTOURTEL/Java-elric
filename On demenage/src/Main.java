@@ -6,20 +6,33 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner clavier = new Scanner(System.in);
-        boolean input = false;
-        while(!input){
-            System.out.print("Veuillez saisir le nombre de cartons puis la capacité par voyage (Séparé les input par un espace): ");
-            try{
-                int totalBoxes = clavier.nextInt();
-                int boxesThisTrip = clavier.nextInt();
-                Moving moving = new Moving(totalBoxes, boxesThisTrip);
-                moving.performMoving();
-                input=true;
-            }
-            catch(InputMismatchException e){
+        int totalBoxes = 0;
+        int boxesThisTrip = 0;
+        boolean validBoxes = false;
+        boolean validCapacity = false;
+        while(!validBoxes) {
+            Output.inputMessageBoxes();
+            try {
+                totalBoxes = clavier.nextInt();
+                validBoxes = true;
+            } catch (InputMismatchException e) {
                 Output.tripMessageError();
                 clavier.nextLine();
             }
         }
-    }
+        while(!validCapacity){
+            Output.inputMessageCapacity();
+            try {
+                boxesThisTrip = clavier.nextInt();
+                validCapacity = true;
+            }
+            catch (InputMismatchException e) {
+                Output.tripMessageError();
+                clavier.nextLine();
+            }
+        }
+        Moving moving = new Moving(totalBoxes, boxesThisTrip);
+        moving.performMoving();
+        clavier.close();
+        }
 }
