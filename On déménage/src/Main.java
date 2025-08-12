@@ -5,16 +5,16 @@ public class Main {
         Scanner clavier = new Scanner(System.in);
         System.out.print("Veuillez saisir le nombre de cartons: ");
         int numberCarton = clavier.nextInt();
-        int numberCartonVoyage = 0;
+        System.out.print("Quelle capacité a votre camion ? ");
+        int numberCartonVoyage = clavier.nextInt();
         int numberVoyage = 0;
         while (numberCarton > 0){
-            if(numberCarton<9){
+            if(numberCarton<numberCartonVoyage){
                 numberCartonVoyage = numberCarton;
                 System.out.println("Le voyage a fait " + numberCarton + " colis transporter");
                 numberCarton = numberCarton - numberCartonVoyage;
             }
             else{
-                numberCartonVoyage=9;
                 System.out.println("Le voyage a fait " + numberCartonVoyage + " colis transporter"); }
             numberCarton = numberCarton - numberCartonVoyage;
             numberVoyage++;
