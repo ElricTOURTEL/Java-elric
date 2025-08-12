@@ -18,8 +18,8 @@ Then it simulates each trip and display:
 
 ## 🚀 Features
 
--User input through the console
--Calculation of trips based on total boxes and capacity
+- User input through the console
+- Calculation of trips based on total boxes and capacity
 
 ## 🛠️ Technologies Used
 - Java 17+ (JDK)
