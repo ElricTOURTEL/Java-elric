@@ -7,8 +7,8 @@ A simple Java program that calculate the number of trip needed to move a total o
 ## 📖 Description
 
 The program asks the user:
-1- **Total number of boxes to move**.
-2- **Capacity per trip**.
+1. **Total number of boxes to move**.
+2. **Capacity per trip**.
 
 Then it simulates each trip and display:
 - How much boxes were move during a trip
